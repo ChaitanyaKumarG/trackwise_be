@@ -46,7 +46,7 @@ app.use("/attendance", attendanceRoute)
 
 
 app.get("/", (req, res) => {
-    res.send("Server running");
+    res.send("Server running & in vercel also");
 });
 
 app.listen(port, () => {
