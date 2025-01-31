@@ -18,6 +18,17 @@ const Attendance = {
     const query = "SELECT * FROM attendance WHERE StudentID = ?";
     db.query(query, [Studentid], e);
   },
+
+  getAllAttendance: (e) => {
+    const query = "SELECT * FROM attendance";
+    db.query(query, e);
+  },
+
+  getAttendanceByDate: (Date, e) => {
+    const query = "SELECT * FROM attendance WHERE Date = ?";
+    db.query(query, [Date], e);
+  },
+
 };
 
 module.exports = Attendance

@@ -10,7 +10,7 @@ const AttendanceController = {
   },
 
   gettingAttendanceByClass: (req, res) => {
-    const {Class} = req.params;
+    const { Class } = req.params;
     Attendance.getAttendanceByClass(Class, (err, result) => {
       if (err) res.json(err);
       else res.json(result);
@@ -18,12 +18,28 @@ const AttendanceController = {
   },
 
   gettingAttendanceByStudentID: (req, res) => {
-    const {Studentid} = req.params;
+    const { Studentid } = req.params;
     Attendance.getAttendanceByStudentID(Studentid, (err, result) => {
       if (err) res.json(err);
       else res.json(result);
     });
   },
+
+  gettingAllAttendance: (req, res) => {
+    Attendance.getAllAttendance((err, result) => {
+      if (err) res.json(err);
+      else res.json(result);
+    });
+  },
+
+  gettingAttendanceByDate: (req, res) => {
+    const { Date } = req.params;
+    Attendance.getAttendanceByDate(Date, (err, result) => {
+      if (err) res.json(err);
+      else res.json(result);
+    });
+  },
+
 };
 
 module.exports = AttendanceController
