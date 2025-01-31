@@ -25,6 +25,15 @@ const FacultyController = {
     });
   },
 
+  updateFaculty:()=>{
+    const {id} = req.params;
+    const updatedFaculty = req.body;
+    Faculty.update(id, updatedFaculty, (err, result)=>{
+      if (err) res.status(500).json({error: err.message})
+        else res.json({msg: "Faculty Updated", result})
+    })
+  },
+
   deleteFaculty: (req, res) => {
     const { id } = req.params;
     Faculty.delete(id, (err, result) => {

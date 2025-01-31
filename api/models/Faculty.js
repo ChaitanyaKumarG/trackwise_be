@@ -20,6 +20,12 @@ const Faculty = {
         db.query(query, [Name, PhNo, Email, FacultyKey, Password], e)
     },
 
+    update: (id, Faculty, e)=>{
+        const query = "UPDATE faculty SET Name = ?, PhNo = ?, Email = ?, FacultyKey = ?, Password = ? WHERE FacultyID = ?"
+        const {Name, PhNo, Email, FacultyKey, Password} = Faculty;
+        db.query(query, [Name, PhNo, Email, FacultyKey, Password, id], e)
+    },
+
     delete: (id, e)=>{
         const query = "DELETE FROM faculty WHERE FacultyID = ?";
         db.query(query, [id], e)

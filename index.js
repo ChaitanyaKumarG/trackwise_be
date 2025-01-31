@@ -7,6 +7,12 @@ const bodyParser = require("body-parser");
 
 //Middlewares
 app.use(cors());
+app.use(
+  cors({
+    origin: ["https://track-wise-ten.vercel.app", "http://localhost:3000"],
+    credentials: true,
+  })
+);
 app.use(cors({ origin: "*" }));
 app.use(morgan("dev"));
 app.use(express.json());

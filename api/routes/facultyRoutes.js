@@ -15,4 +15,7 @@ route.post("/", FacultyController.createFaculty);
 // Route to delete a faculty by ID
 route.delete("/:id", FacultyController.deleteFaculty);
 
+// Route to update Faculty by ID
+route.put("/:id", FacultyController.updateFaculty);
+
 module.exports = route
