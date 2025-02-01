@@ -54,14 +54,11 @@ const AttendanceController = {
 
 This is an automated notification from [*School Name*]. Your child was absent on ${date}.
 
-If this absence was recorded in error or if you wish to provide a reason,
-please update the school portal or contact the administration at [ +91 95505 57555 {dont call me😅} ].
+Your child was marked absent on ${date}. Please check the school portal for details.
+If this was an error or you’d like to provide a reason,
+kindly update the portal or contact us at [9550557555 - Don't Callme😅].
 
 **This is a system-generated email. Please do not reply directly to this message.**
-=======
-Your child was marked absent on ${date}. Please check the school portal for details.
-If this was an error or you’d like to provide a reason, kindly update the portal or contact us at [9550557555 - Don't Callme😅].
-
 
 Best regards,
 [School Name]`;
