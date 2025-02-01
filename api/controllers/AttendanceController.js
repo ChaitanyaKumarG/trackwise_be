@@ -1,3 +1,4 @@
+const { sendMail } = require("../config/mail");
 const Attendance = require("../models/Attendance");
 
 const AttendanceController = {
@@ -10,7 +11,7 @@ const AttendanceController = {
   },
 
   gettingAttendanceByClass: (req, res) => {
-    const {Class} = req.params;
+    const { Class } = req.params;
     Attendance.getAttendanceByClass(Class, (err, result) => {
       if (err) res.json(err);
       else res.json(result);
@@ -18,13 +19,16 @@ const AttendanceController = {
   },
 
   gettingAttendanceByStudentID: (req, res) => {
-    const {Studentid} = req.params;
+    const { Studentid } = req.params;
     Attendance.getAttendanceByStudentID(Studentid, (err, result) => {
       if (err) res.json(err);
       else res.json(result);
     });
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8d91e4d (Merge pull request #2 from ChaitanyaKumarG/revert-1-localUpdates)
 
   gettingAllAttendance: (req, res) => {
     Attendance.getAllAttendance((err, result) => {
@@ -51,12 +55,17 @@ const AttendanceController = {
         email = email.trim().normalize("NFKC"); // Normalize the email
         const emailBody = `Dear Parent,
 
+<<<<<<< HEAD
 This is an automated notification from [*School Name*]. Your child was absent on ${date}.
 
 If this absence was recorded in error or if you wish to provide a reason,
 please update the school portal or contact the administration at [ +91 95505 57555 {dont call me😅} ].
 
 **This is a system-generated email. Please do not reply directly to this message.**
+=======
+Your child was marked absent on ${date}. Please check the school portal for details.
+If this was an error or you’d like to provide a reason, kindly update the portal or contact us at [9550557555 - Don't Callme😅].
+>>>>>>> parent of 8d91e4d (Merge pull request #2 from ChaitanyaKumarG/revert-1-localUpdates)
 
 Best regards,
 [School Name]`;
@@ -80,8 +89,11 @@ Best regards,
       else res.json(result);
     });
   },
+<<<<<<< HEAD
 =======
 >>>>>>> 8d91e4d7c3199d0f2ef5c107f8bd5f841b2be378
+=======
+>>>>>>> parent of 8d91e4d (Merge pull request #2 from ChaitanyaKumarG/revert-1-localUpdates)
 };
 
-module.exports = AttendanceController
+module.exports = AttendanceController;
