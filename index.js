@@ -53,7 +53,7 @@ app.use("/attendance", attendanceRoute)
 
 
 app.get("/", (req, res) => {
-    res.send("Server running");
+    res.send(`Server running at port ${port}`);
 });
 
 app.listen(port, () => {
