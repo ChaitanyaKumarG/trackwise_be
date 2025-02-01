@@ -16,11 +16,6 @@ const Students = {
     db.query(query, [penNo], e);
   },
 
-  getmailbystudentId: (StudentID, e)=>{
-    const query = "SELECT Email FROM student WHERE StudentID = ?"
-    db.query(query, [StudentID], e)
-  },
-
   getByStudentId: (StudentId, e) => {
     const query = "SELECT * FROM student WHERE StudentID = ?";
     db.query(query, [StudentId], e);

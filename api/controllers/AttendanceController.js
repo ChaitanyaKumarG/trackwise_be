@@ -1,4 +1,3 @@
-const { sendMail } = require("../config/mail");
 const Attendance = require("../models/Attendance");
 
 const AttendanceController = {
@@ -11,7 +10,7 @@ const AttendanceController = {
   },
 
   gettingAttendanceByClass: (req, res) => {
-    const { Class } = req.params;
+    const {Class} = req.params;
     Attendance.getAttendanceByClass(Class, (err, result) => {
       if (err) res.json(err);
       else res.json(result);
@@ -19,12 +18,13 @@ const AttendanceController = {
   },
 
   gettingAttendanceByStudentID: (req, res) => {
-    const { Studentid } = req.params;
+    const {Studentid} = req.params;
     Attendance.getAttendanceByStudentID(Studentid, (err, result) => {
       if (err) res.json(err);
       else res.json(result);
     });
   },
+<<<<<<< HEAD
 
   gettingAllAttendance: (req, res) => {
     Attendance.getAllAttendance((err, result) => {
@@ -80,6 +80,8 @@ Best regards,
       else res.json(result);
     });
   },
+=======
+>>>>>>> 8d91e4d7c3199d0f2ef5c107f8bd5f841b2be378
 };
 
-module.exports = AttendanceController;
+module.exports = AttendanceController

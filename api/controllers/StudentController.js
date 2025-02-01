@@ -32,14 +32,6 @@ const StudentController = {
     });
   },
 
-  getMailByStudentId: (req, res) => {
-    const { StudentId } = req.params;
-    Student.getmailbystudentId(StudentId, (err, result) => {
-      if (err) res.json(err);
-      else res.json(result);
-    });
-  },
-
   createStudent: (req, res) => {
     const student = req.body;
     Student.add(student, (err, result) => {
